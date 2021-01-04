@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -19,6 +20,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
     <title>Work Day Scheduler</title>
   </head>
 
@@ -34,5 +38,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <!-- The javascript below defines the contents of the page by populating its elements using jQuery -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      
+      var dateDisplay = $("#currentDay");
+      dateDisplay.text(moment().format('MMMM Do YYYY, h:mm a'));
+    
+    });
+    </script>
   </body>
 </html>
