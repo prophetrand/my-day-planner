@@ -51,25 +51,29 @@
       var hoursList = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
       var mainBox = $(".container");
-      var hour = $("<div>");
-      var rowBox = $("<div>");
+      
 
       // This for loop creates the initial structure of the time slots
       for (i = 0; i < hoursList.length; i++){
+        var hour = $("<div>");
+        var rowBox = $("<div>");
+        var textArea = $("<textarea>");
+        
+        // Rows generated here are also assigned specific data-time attributes to later be specifically referenced.
+        rowBox.addClass("row");
+        rowBox.attr("data-time", hoursList[i]);
+        mainBox.append(rowBox);
 
+        hour.addClass("hour");
+        hour.text(hoursList[i]);
+        rowBox.append(hour);
+        rowBox.append(textArea);
       }
-
-      rowBox.addClass("row");
-      mainBox.append(rowBox);
-
-      hour.addClass("hour");
-      hour.text("9am");
-      rowBox.append(hour);
     
     });
     </script>
   </body>
 </html>
 
-<!-- the class "textarea" seems to refer to the fields that the user can type in, and is transparent. Therefore the colored part behind is likely different from the textarea element, aside from how one is overlayed on the other. -->
+<!-- the class "textarea" seems to refer to the fields that the user can type in, and is transparent. I will most likely change that style color based on conditionals referencing the time of day. -->
 <!-- <i class="far fa-save"></i> displays the save icon, will be useful!-->
