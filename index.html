@@ -47,11 +47,17 @@
       var dateDisplay = $("#currentDay");
       dateDisplay.text(moment().format('MMMM Do YYYY, h:mm a'));
       
+      // Array holding the hours of the workday, each to be assigned to their respective boxes using a for loop.
       var hoursList = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
       var mainBox = $(".container");
       var hour = $("<div>");
       var rowBox = $("<div>");
+
+      // This for loop creates the initial structure of the time slots
+      for (i = 0; i < hoursList.length; i++){
+
+      }
 
       rowBox.addClass("row");
       mainBox.append(rowBox);
