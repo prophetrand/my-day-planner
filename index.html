@@ -34,6 +34,7 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -45,8 +46,24 @@
       
       var dateDisplay = $("#currentDay");
       dateDisplay.text(moment().format('MMMM Do YYYY, h:mm a'));
+      
+      var hoursList = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+
+      var mainBox = $(".container");
+      var hour = $("<div>");
+      var rowBox = $("<div>");
+
+      rowBox.addClass("row");
+      mainBox.append(rowBox);
+
+      hour.addClass("hour");
+      hour.text("9am");
+      rowBox.append(hour);
     
     });
     </script>
   </body>
 </html>
+
+<!-- the class "textarea" seems to refer to the fields that the user can type in, and is transparent. Therefore the colored part behind is likely different from the textarea element, aside from how one is overlayed on the other. -->
+<!-- <i class="far fa-save"></i> displays the save icon, will be useful!-->
