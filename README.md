@@ -43,6 +43,7 @@ Hello! This deployed webpage is
 ## Acknowledgments
 * [W3Schools](https://www.w3schools.com/) has been my go-to for descriptive tutorials on HTML, CSS, and Javascript syntax and best practices. I am eternally grateful for their massive store of documentation.
 * [Bootstrap]
+* [Moment.js](https://momentjs.com/) is a free API that allows (and simplifies) the use of dates and times in Javascript. Even though this service is no longer supported by its developers, I am thankful for its straightforward usage and succinct structure.
 
 
 ## Who I Am
