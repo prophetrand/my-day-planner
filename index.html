@@ -41,7 +41,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     
     <!-- The javascript below defines the contents of the page by populating its elements using jQuery -->
-    <script type="text/javascript">
+    <script>
     $(document).ready(function() {
       
       var dateDisplay = $("#currentDay");
@@ -58,16 +58,28 @@
         var hour = $("<div>");
         var rowBox = $("<div>");
         var textArea = $("<textarea>");
-        
-        // Rows generated here are also assigned specific data-time attributes to later be specifically referenced.
-        rowBox.addClass("row");
-        rowBox.attr("data-time", hoursList[i]);
-        mainBox.append(rowBox);
+        var saveButton = $("<button>");
+        var saveIcon = $("<div>");
 
-        hour.addClass("hour");
+        rowBox.addClass("row");
+        // Rows are also assigned specific data-time attributes to later be specifically referenced, with value equal to their respective index.
+        rowBox.attr("data-time", hoursList[i]);
+
+        // Width of the hour, textArea, and saveButton divisions are defined here with Bootstrap classes.
+        hour.addClass("hour col-1");
+        saveButton.addClass("saveBtn col-1");
+        textArea.addClass("col-10");
+
+        saveIcon.html('<i class="far fa-save"></i>');
+        saveButton.append(saveIcon);
+
         hour.text(hoursList[i]);
+
         rowBox.append(hour);
         rowBox.append(textArea);
+        rowBox.append(saveButton);
+
+        mainBox.append(rowBox);
       }
     
     });
