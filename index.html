@@ -62,7 +62,7 @@
         var saveIcon = $("<div>");
 
         rowBox.addClass("row");
-        // Rows are also assigned specific data-time attributes to later be specifically referenced, with value equal to their respective index.
+        // Rows are assigned specific data-time attributes to later be specifically referenced, with value equal to their index plus 9 to match the 24-hour clock.
         rowBox.attr("data-time", i + 9);
 
         // Width of the hour, textArea, and saveButton divisions are defined here with Bootstrap classes.
@@ -72,7 +72,8 @@
 
         saveIcon.html('<i class="far fa-save"></i>');
         saveButton.append(saveIcon);
-
+        
+        // Text content of the lefthand hour box is set equal to its respective index value.
         hour.text(hoursList[i]);
 
         rowBox.append(hour);
@@ -80,12 +81,17 @@
         rowBox.append(saveButton);
 
         mainBox.append(rowBox);
+
+        if (parseInt(moment().format('H')) > rowBox.attr("data-time")){
+          textArea.addClass("past");
+        } else if (parseInt(moment().format('H')) < rowBox.attr("data-time")){
+          textArea.addClass("future");
+        } else {
+          textArea.addClass("present");
+        }
       }
       // HERE I WILL WRITE IF TREES THAT COMPARE THE HOUR VALUES TO THE CURRENT TIME USING MOMENT.JS. MIGHT BE ABLE TO USE A LOOP BUT MOST LIKELY WILL HAVE TO DO EACH ROW INDIVIDUALLY. GOOD THING I MADE POINTERS BY DATA-TIME. CALLING MOMENT() WITH NO PARAMETERS WILL RETURN THE CURRENT DATE AND TIME. THE IF TREES MAY END UP IN THE FOR LOOP AT SOME POINT BUT I DON'T KNOW YET. IT WOULD BE COOL IF I COULD COMPARE THE TIME VALUES TO DATA-TIME.
       
-      if (parseInt(moment().format('H')) > 9){
-        console.log("poopoo");
-      };
 
       function tooter() {
         console.log("Leia toots");
