@@ -20,6 +20,7 @@ Hello! This deployed webpage is
 * [CSS](https://www.w3schools.com/css/) for visual styling to make that HTML much prettier.
 * [Javascript](https://www.javascript.com/) to develop the algorithms included in this web application.
 * [jQuery](https://api.jquery.com/) for shorthand Javascript commands included in the code.
+* [Bootstrap](https://getbootstrap.com/) for shorthand CSS styling within the HTML.
 * [Git](https://git-scm.com/) for distributed version control, tracking changes over time and making them visible to collaborators.
 * [Github](https://github.com/) for version control in the cloud, saving my changes and presenting them clearly to myself and others.
 
@@ -42,7 +43,7 @@ Hello! This deployed webpage is
 
 ## Acknowledgments
 * [W3Schools](https://www.w3schools.com/) has been my go-to for descriptive tutorials on HTML, CSS, and Javascript syntax and best practices. I am eternally grateful for their massive store of documentation.
-* [Bootstrap]
+* [MDN Web Docs](https://developer.mozilla.org/en-US/) is another resource for documentation on HTML, CSS, and Javascript that I find myself using more and more often as I work through deeper Javascript.
 * [Moment.js](https://momentjs.com/) is a free API that allows (and simplifies) the use of dates and times in Javascript. Even though this service is no longer supported by its developers, I am thankful for its straightforward usage and succinct structure.
 
 

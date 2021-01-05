@@ -63,7 +63,7 @@
 
         rowBox.addClass("row");
         // Rows are also assigned specific data-time attributes to later be specifically referenced, with value equal to their respective index.
-        rowBox.attr("data-time", hoursList[i]);
+        rowBox.attr("data-time", i + 9);
 
         // Width of the hour, textArea, and saveButton divisions are defined here with Bootstrap classes.
         hour.addClass("hour col-1");
@@ -81,7 +81,22 @@
 
         mainBox.append(rowBox);
       }
-    
+      // HERE I WILL WRITE IF TREES THAT COMPARE THE HOUR VALUES TO THE CURRENT TIME USING MOMENT.JS. MIGHT BE ABLE TO USE A LOOP BUT MOST LIKELY WILL HAVE TO DO EACH ROW INDIVIDUALLY. GOOD THING I MADE POINTERS BY DATA-TIME. CALLING MOMENT() WITH NO PARAMETERS WILL RETURN THE CURRENT DATE AND TIME. THE IF TREES MAY END UP IN THE FOR LOOP AT SOME POINT BUT I DON'T KNOW YET. IT WOULD BE COOL IF I COULD COMPARE THE TIME VALUES TO DATA-TIME.
+      
+      if (parseInt(moment().format('H')) > 9){
+        console.log("poopoo");
+      };
+
+      function tooter() {
+        console.log("Leia toots");
+      }
+
+      // Check class activities to find out how to properly assign click event to every button. In its current state (saveButton.on("click", function)) it only properly calls the function when the LAST button is pressed. I recall in class the event listener has to be pinned to the whole document somehow.
+      saveButton.on("click", tooter)
+
+      console.log(moment("12-25-1995", "MM-DD-YYYY"));
+      console.log(moment().format("H"));
+      console.log(typeof parseInt(moment().format('h')));
     });
     </script>
   </body>
