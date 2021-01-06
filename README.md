@@ -36,8 +36,8 @@ Hello! This deployed webpage is
 
 
 ## Screenshots
-
-![example](./Assets/example-quiz.PNG)
+The image below displays the appearance of the web app on a medium-sized screen.
+![example](example-planner.PNG)
 
 ---
 
