@@ -21,8 +21,6 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
     <title>Work Day Scheduler</title>
   </head>
 
@@ -51,7 +49,6 @@
       var hoursList = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
       var mainBox = $(".container");
-      
 
       // This for loop creates the initial structure of the time slots
       for (i = 0; i < hoursList.length; i++){
@@ -79,9 +76,9 @@
         rowBox.append(hour);
         rowBox.append(textArea);
         rowBox.append(saveButton);
-
         mainBox.append(rowBox);
-
+        
+        // The current hour (in 24-hour format) is compared to the data-time label for each row. Depending on the condition met, the class of past, present, or future is added to the textArea. In the CSS, these classes have specific rules for text and background colors.
         if (parseInt(moment().format('H')) > rowBox.attr("data-time")){
           textArea.addClass("past");
         } else if (parseInt(moment().format('H')) < rowBox.attr("data-time")){
@@ -98,7 +95,7 @@
       }
 
       // Check class activities to find out how to properly assign click event to every button. In its current state (saveButton.on("click", function)) it only properly calls the function when the LAST button is pressed. I recall in class the event listener has to be pinned to the whole document somehow.
-      saveButton.on("click", tooter)
+      $(".saveBtn").on("click", tooter)
 
       console.log(moment("12-25-1995", "MM-DD-YYYY"));
       console.log(moment().format("H"));
