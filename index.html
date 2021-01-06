@@ -92,7 +92,6 @@
         } else {
           textArea.addClass("present");
         }
-
       }
 
       // This event listener triggers when any element with the class "saveBtn" is clicked on, and corresponds to every save button.
@@ -100,7 +99,7 @@
         // The sibling of the clicked button with the class of "time-block" is accessed, and the text contained there is stored in the variable saveThisText.
         var saveThisText = $(this).siblings(".time-block").val();
 
-        // A key is created using the "data-time" value of the parent row, and is stored in the variable contentKey
+        // A key is created using the "data-time" value of the parent row, and is stored in the variable contentKey.
         var contentKey = "content-" + $(this).parents().attr("data-time");
 
         // The key of contentKey with the value of saveThisText is saved to local storage.
