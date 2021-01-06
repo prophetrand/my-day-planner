@@ -45,6 +45,7 @@ Hello! This deployed webpage is
 * [W3Schools](https://www.w3schools.com/) has been my go-to for descriptive tutorials on HTML, CSS, and Javascript syntax and best practices. I am eternally grateful for their massive store of documentation.
 * [MDN Web Docs](https://developer.mozilla.org/en-US/) is another resource for documentation on HTML, CSS, and Javascript that I find myself using more and more often as I work through deeper Javascript.
 * [Moment.js](https://momentjs.com/) is a free API that allows (and simplifies) the use of dates and times in Javascript. Even though this service is no longer supported by its developers, I am thankful for its straightforward usage and succinct structure.
+* UC Berkeley Coding Bootcamp provided the initial HTML to begin developing from.
 
 
 ## Who I Am
