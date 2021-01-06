@@ -91,8 +91,8 @@
       // This event listener triggers when any element with the class "saveBtn" is clicked on, and corresponds to every save button.
       $(".saveBtn").on("click", function(){
         var saveThisText = $(this).siblings(".time-block").val();
-        console.log(saveThisText);
-        localStorage.setItem("content", saveThisText);
+        var contentKey = "content-" + $(this).parents().attr("data-time");
+        localStorage.setItem(contentKey, saveThisText);
       })
 
     });
